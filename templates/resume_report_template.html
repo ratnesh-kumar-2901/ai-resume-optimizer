@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Analysis Report</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 20px;
+      background-color: #e8d9d9;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      border: 2px solid none;
+      width: fit-content;
+      padding: 8px;
+      border-radius: 8px;
+      background-color: #347bd8;
+      color: white;
+      font-size: large;
+    }
+    li{
+      padding: 5px;
+    }
+    .text-block {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border: 1px solid #ddd;
+      white-space: pre-wrap;
+      border-radius: 8px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 style="text-align: center; border: 2px solid rgb(9, 12, 14); border-radius: 8px; padding: 5px;margin-top: 2px; background-color: #2da3df; color:black;">Resume Analysis Report</h1>
+  <p style="color: rgb(0, 0, 0); margin-bottom: 20px;">Generated on: {{timestamp}}</p>
+</header>
+
+<section>
+  <h2>Candidate Info</h2>
+ 
+  <li><b>Name:</b> {{name}}</li>
+  <li><b>Email:</b> {{email}}</li>
+  <li><b>Resume Pages:</b> {{page_nos}}</li>
+  
+</section>
+
+<section>
+  <h2>ATS Score</h2>
+  <p><span class="metric"><b>Score:</b></span> {{resume_score}}%</p>
+</section>
+
+<section>
+    <h2>Job Description</h2>
+    <span>Job description provided (furthur analysis is based on this JD).</span>
+    <p class="text-block" style="border: 2px solid none; border-radius: 8px;">{{job_description_input}}</p>
+</section>
+
+<section>
+  <h2>Overall Summary</h2>
+  <div class="text-block">{{bullet_summary}}</div>
+</section>
+
+<section>
+    <h2>Resume Skills and Keywords</h2>
+    <span>These are the list of all  keywords in your resume. Add them to improve ATS score.</span>
+    <p class="text-block">{{resume_keywords}}</p>
+</section>
+
+<section>
+    <h2>JD Skills and Keywords</h2>
+    <span>These are the list of all keywords in JD provided. Add them to improve ATS score.</span>
+    <p class="text-block">{{jd_keywords}}</p>
+</section>
+
+<section>
+    <h2>Missing Keywords</h2>
+    <span>These are the list of all missing keywords in your resume. Add them to improve ATS score.</span>
+    <p class="text-block">{{missing_keywords}}</p>
+</section>
+
+<section>
+  <h2>Suggested Lines and Phrases</h2>
+  <span>These are the following suggestions based on Resume and Job Description, consider adding these to improve your match</span>
+  <p class="text-block">{{missing_points}}<p>
+</section>
+
+<section>
+  <h2>Cover Letter</h2>
+  <span>Proffesional Cover Letter</span>
+  <p class="text-block">{{cover_letter}}</p>
+</section>
+
+
+<section>
+  <h4 style='color: #0c3960; margin-bottom: 10px;'>How to Add Missing Requirements</h4>
+  <div style='background-color: #ffffff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 5px solid #17a2b8;'>
+      <ul style='color: #000000; margin: 0; padding-left: 20px;;'>
+          <li>Incorporate these points naturally in your experience descriptions</li>
+          <li>Add specific examples that demonstrate these skills</li>
+          <li>Use action verbs and quantify achievements where possible</li>
+          <li>Ensure the additions are relevant to your actual experience</li>
+      </ul>
+  </div>
+</section>
+
+
+
+<section>
+  <h3 style='margin-bottom: 20px; color:#0c3960'>How to Improve Your Resume</h3>
+
+      <div style='background-color: #fefefe; padding: 15px 20px; border-radius: 8px; border: 2px solid #ffc107; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);'>
+          <h4 style='color: #d39e00; margin-bottom: 10px;'>1️. Add Missing Keywords</h4>
+          <ul style='color: black; font-size: 14px; padding-left: 20px;'>
+              <li>Incorporate missing keywords naturally in your experience descriptions</li>
+              <li>Add them to your skills section if relevant</li>
+              <li>Include them in your resume summary</li>
+          </ul>
+      </div>
+
+      <div style='background-color: #ffffff; padding: 15px 20px; border-radius: 8px; border: 2px solid #ffc107; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);'>
+          <h4 style='color: #d39e00; margin-bottom: 10px;'>2. Highlight Priority Keywords</h4>
+          <ul style='color: black; font-size: 14px; padding-left: 20px;'>
+              <li>Place high-priority keywords in prominent positions</li>
+              <li>Use them in bullet points describing your achievements</li>
+              <li>Include specific examples that demonstrate these skills</li>
+          </ul>
+      </div>
+
+      <div style='background-color: #ffffff; padding: 15px 20px; border-radius: 8px; border: 2px solid #ffc107; box-shadow: 0 2px 4px rgba(0,0,0,0.05);'>
+          <h4 style='color: #d39e00; margin-bottom: 10px;'>3️. Best Practices</h4>
+          <ul style='color: black; font-size: 14px; padding-left: 20px;'>
+              <li>Keep descriptions concise and impactful</li>
+              <li>Use action verbs to start bullet points</li>
+              <li>Quantify achievements where possible</li>
+              <li>Ensure all keywords are contextually relevant</li>
+          </ul>
+      </div>
+</section>
+<footer>
+  <p style="text-align:center; margin-top: 40px; font-size: 0.85em; color: #000000;">
+    Thank You!
+    Made by Krish!!
+  </p>
+</footer>
+
+</body>
+</html>

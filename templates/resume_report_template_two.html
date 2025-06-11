@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Analysis Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      padding: 30px;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      margin-bottom: 30px;
+    }
+
+    h1, h2, h3, h4 {
+      color: #0c3960;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 15px;
+      background-color: #2da3df;
+      color: white;
+      border-radius: 8px;
+      border: 1px solid #999;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      background-color: #347bd8;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    .info-list li {
+      margin: 6px 0;
+    }
+
+    .text-block {
+      background-color: #f0f0f0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      margin-top: 8px;
+    }
+
+    .highlight-box {
+      background-color: #fff8e1;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
+    .highlight-box h4 {
+      color: #d39e00;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #777;
+    }
+
+    .metric {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Resume Analysis Report</h1>
+  <p>Generated on: {{timestamp}}</p>
+</header>
+
+<section>
+  <h2>Candidate Info</h2>
+  <ul class="info-list">
+    <li><b>Name:</b> {{name}}</li>
+    <li><b>Email:</b> {{email}}</li>
+    <li><b>Resume Pages:</b> {{page_nos}}</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ATS Score</h2>
+  <p><span class="metric">Score:</span> {{resume_score}}%</p>
+</section>
+
+<section>
+  <h2>Job Description</h2>
+  <p>Job description provided (further analysis is based on this JD).</p>
+  <div class="text-block">{{job_description_input}}</div>
+</section>
+
+<section>
+  <h2>Missing Keywords</h2>
+  <p>These are the list of all missing keywords in your resume. Add them to improve ATS score.</p>
+  <div class="text-block">{{missing_keywords}}</div>
+</section>
+
+<section>
+  <h2>High Priority Keywords</h2>
+  <p>These are the most important keywords from the job description. Make sure to highlight these in your resume to stand out.</p>
+  <div class="text-block">{{high_priority_keywords}}</div>
+</section>
+
+<section>
+  <h2>Missing Lines and Phrases</h2>
+  <div class="text-block">{{missing_points}}</div>
+</section>
+
+<section>
+  <h3>How to Add Missing Requirements</h3>
+  <div class="highlight-box">
+    <ul>
+      <li>Incorporate these points naturally in your experience descriptions</li>
+      <li>Add specific examples that demonstrate these skills</li>
+      <li>Use action verbs and quantify achievements where possible</li>
+      <li>Ensure the additions are relevant to your actual experience</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Overall Summary</h2>
+  <div class="text-block">{{bullet_summary}}</div>
+</section>
+
+<section>
+  <h3>How to Improve Your Resume</h3>
+
+  <div class="highlight-box">
+    <h4>1. Add Missing Keywords</h4>
+    <ul>
+      <li>Incorporate missing keywords naturally in your experience descriptions</li>
+      <li>Add them to your skills section if relevant</li>
+      <li>Include them in your resume summary</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <h4>2. Highlight Priority Keywords</h4>
+    <ul>
+      <li>Place high-priority keywords in prominent positions</li>
+      <li>Use them in bullet points describing your achievements</li>
+      <li>Include specific examples that demonstrate these skills</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <h4>3. Best Practices</h4>
+    <ul>
+      <li>Keep descriptions concise and impactful</li>
+      <li>Use action verbs to start bullet points</li>
+      <li>Quantify achievements where possible</li>
+      <li>Ensure all keywords are contextually relevant</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>Thank You!</p>
+</footer>
+
+</body>
+</html>

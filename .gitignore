@@ -1,0 +1,21 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+.env
+
+# Ignore Streamlit config
+.streamlit/secrets.toml
+
+# Ignore OS files
+.DS_Store
+*.log
+
+# Ignore data, config, and API key files
+config.json
+*.csv
+apikeys.json
+
+App.txt

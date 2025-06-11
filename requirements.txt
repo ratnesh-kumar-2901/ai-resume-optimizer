@@ -1,0 +1,68 @@
+# Activate your virtual environment first
+# For Windows CMD
+venv_new\Scripts\activate
+
+# Or PowerShell
+.\venv_new\Scripts\Activate.ps1
+
+# ---------------------------------------
+# Core dependencies
+# ---------------------------------------
+pip install streamlit==1.34.0
+pip install python-dotenv
+pip install torch>=2.0.0
+pip install transformers>=4.39.0
+pip install sentence-transformers>=2.2.2
+pip install scikit-learn>=1.4.0
+pip install numpy>=1.24.0
+pip install pandas>=2.2.0
+pip install spacy==3.7.4
+pip install nltk>=3.8.1
+pip install language-tool-python>=2.7.1
+pip install sentencepiece
+pip install pdfplumber
+
+# ---------------------------------------
+# PDF parsing and generation
+# ---------------------------------------
+pip install pdfminer.six>=20221105
+pip install xhtml2pdf>=0.2.11
+pip install pdfkit>=1.0.0
+
+# ---------------------------------------
+# Keyword extraction
+# ---------------------------------------
+pip install keybert>=0.7.0
+pip install yake>=0.4.8
+
+# ---------------------------------------
+# Plotting & visualization
+# ---------------------------------------
+pip install plotly>=5.19.0
+pip install matplotlib>=3.8.0
+
+# ---------------------------------------
+# Template rendering
+# ---------------------------------------
+pip install jinja2>=3.1.3
+
+# ---------------------------------------
+# Database connector
+# ---------------------------------------
+pip install pymysql>=1.1.0
+
+# ---------------------------------------
+# Web interaction & async support
+# ---------------------------------------
+pip install aiohttp>=3.9.5
+
+# ---------------------------------------
+# System utilities
+# ---------------------------------------
+pip install pathlib
+pip install regex
+
+
+
+python -m nltk.downloader punkt stopwords
+python -m spacy download en_core_web_sm
